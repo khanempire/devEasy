@@ -79,7 +79,10 @@ const PostDetail = ({ post }) => {
             );
          case "code-block":
             return (
-               <pre key={index} className='mb-8 text-white bg-black p-4'>
+               <pre
+                  key={index}
+                  className='mb-8 text-white bg-black p-4 overflow-x-auto'
+               >
                   {modifiedText.map((item, i) => (
                      <code key={i}>{item}</code>
                   ))}
