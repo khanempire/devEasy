@@ -96,6 +96,22 @@ const PostDetail = ({ post }) => {
                   ))}
                </blockquote>
             );
+         case "bulleted-list":
+            return (
+               <ul key={index} className='mb-2'>
+                  {modifiedText.map((item, i) => (
+                     <li key={i}>{item}</li>
+                  ))}
+               </ul>
+            );
+         case "numbered-list":
+            return (
+               <ol key={index} className='mb-2'>
+                  {modifiedText.map((item, i) => (
+                     <li key={i}>{item}</li>
+                  ))}
+               </ol>
+            );
          case "image":
             return (
                <img
@@ -160,7 +176,6 @@ const PostDetail = ({ post }) => {
                   const children = typeObj.children.map((item, itemindex) =>
                      getContentFragment(itemindex, item.text, item)
                   );
-
                   return getContentFragment(
                      index,
                      children,
