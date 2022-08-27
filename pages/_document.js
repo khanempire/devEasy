@@ -10,6 +10,11 @@ class MyDocument extends Document {
       return (
          <Html>
             <Head>
+               <script
+                  async
+                  src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3877372562561913'
+                  crossorigin='anonymous'
+               ></script>
                {/* <meta name="viewport" content="width=device-width,minimum-scale=1, initial-scale=1" /> */}
             </Head>
             <body>
