@@ -90,7 +90,15 @@ const PostDetail = ({ post }) => {
             );
          case "block-quote":
             return (
-               <blockquote key={index} className='mb-2'>
+               <blockquote
+                  key={index}
+                  style={{
+                     margin: "16px 0",
+                     borderLeft: "black 5px solid",
+                     padding: "16px 0 24px 32px",
+                     fontStyle: "italic",
+                  }}
+               >
                   {modifiedText.map((item, i) => (
                      <span key={i}>{item}</span>
                   ))}
