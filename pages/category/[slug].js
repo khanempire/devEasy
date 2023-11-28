@@ -34,8 +34,11 @@ export default CategoryPost;
 export async function getStaticProps({ params }) {
    const posts = await getCategoryPost(params.slug);
 
+   const revalidateTime = 3600;
+
    return {
       props: { posts },
+      revalidate: revalidateTime,
    };
 }
 

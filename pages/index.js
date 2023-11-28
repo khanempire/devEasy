@@ -26,7 +26,10 @@ export default function Home({ posts }) {
 // Fetch data at build time
 export async function getStaticProps() {
    const posts = (await getPosts()) || [];
+
+   const revalidateTime = 3600;
    return {
       props: { posts },
+      revalidate: revalidateTime,
    };
 }

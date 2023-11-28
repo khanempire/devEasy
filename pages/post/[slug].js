@@ -52,10 +52,13 @@ export default PostDetails;
 // Fetch data at build time
 export async function getStaticProps({ params }) {
    const data = await getPostDetails(params.slug);
+
+   const revalidateTime = 3600;
    return {
       props: {
          post: data,
       },
+      revalidate: revalidateTime,
    };
 }
 

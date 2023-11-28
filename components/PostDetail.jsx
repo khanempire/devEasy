@@ -5,6 +5,10 @@ import moment from "moment";
 const PostDetail = ({ post }) => {
    const getContentFragment = (index, text, obj, type) => {
       let modifiedText = text;
+      console.log("text", text);
+      console.log("obj", obj);
+
+      console.log("type", type);
 
       if (obj) {
          if (obj.bold) {
